@@ -4,7 +4,11 @@ hello-node in podman
 
 ## 1. Build OCI (Open Container Initiative) standard image:
 
-  ` podman build -t . hello-node:latest`
+  ` git clone https://github.com/paranlee/hello-node.git`
+  
+  ` cd hello-node`
+  
+  ` podman build -t hello-node:latest .`
 
 ## 2. Run container:
 
