@@ -1,43 +1,3 @@
-# hello-node
-
-Simple example, we don't need to initialize package.json.
-
-We only need [node.js](https://nodejs.org/ko/download/) and [podman](https://podman.io/getting-started/installation).
-
-This Node.js serve url route and file service with podman.
-
-## Build [OCI](https://en.wikipedia.org/wiki/Open_Container_Initiative) image
-
-```console
-foo@bar:~$ git clone https://github.com/paranlee/hello-node.git
-```
-
-```console
-foo@bar:~$ cd hello-node
-foo@bar:~/hello-node$ podman build -t hello-node:latest .
-```
-
-## Run container
-
-Run container with podman.
-
-```console
-foo@bar:~$ podman run -p 8080:8080 hello-node:latest
-```
-
-## Test each service
-
-Test main URL.
-
-```console
-foo@bar:~$ curl localhost:8080
-Hello node.js!
-```
-
-Get JSON File.
-
-```console
-foo@bar:~$ curl localhost:8080/schemaStore.json
 {
     "typeName": "places",
     "userData": {
@@ -77,4 +37,3 @@ foo@bar:~$ curl localhost:8080/schemaStore.json
         }
     ]
 }
-```
