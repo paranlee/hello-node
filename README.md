@@ -22,7 +22,7 @@ foo@bar:~/hello-node$ podman build -t hello-node:latest .
 Run container with podman.
 
 ```console
-foo@bar:~$ podman run -p 8080:8080 hello-node:latest
+foo@bar:~$ docker run -d -p 8080:8080 --name hello-node hello-node:latest
 ```
 
 ## Test each service
